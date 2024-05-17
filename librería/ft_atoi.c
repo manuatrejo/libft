@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	a = 0;
 	while (str[a] == ' ' || str[a] == '\f' || str[a] == '\n'
-		|| str[a] == '\r' || str[a] == '\t' || str[a] == '\v')
+		|| str[a] == '\r' || str[a] == '\t' || str[a] == '\v')/*probar con poner en ascii del nueve al 13 incluidos*/
 		a++;
 	if (str[a] == '-')
 		result *= -1;
