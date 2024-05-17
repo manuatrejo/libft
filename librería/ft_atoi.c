@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 		if (result > INT_MAX)
 			return (0);
 		result *= 10;
-		result += str[a] - '0';
+		result += /*result * 10*/str[a] - '0';
 		a++;
 	}
 	return (sign * result);
