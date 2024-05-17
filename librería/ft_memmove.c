@@ -19,15 +19,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*b;
 	char	*temp;
 	size_t	n1;
+	int i;
 
+	i = 0;
 	n1 = 0;
 	a = (char *)src;
 	b = (char *)dest;
 	while (n > n1)
 	{
-		*temp = *a;
+		temp[i] = *a;
 		a++;
-		temp++;
+		i++;
 		n1++;
 	}
 	while (n > 0)
