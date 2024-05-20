@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 
 	a = 0;
 	b = 0;
+	if (!dst || !src)
+		return (0);
 	dstlen = ft_strlen(dst);
 	while (dst[a] && n > 1)
 	{
@@ -36,5 +38,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	}
 	if (n != 0)
 		*dst = '\0';
-	return (dstlen + ft_strlen(src));
+	return (dstlen + b);
 }
