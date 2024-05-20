@@ -37,6 +37,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 		n--;
 	}
 	if (n != 0)
-		*dst = '\0';
+		dst[a] = '\0';
 	return (dstlen + b);
 }
