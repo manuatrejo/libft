@@ -17,14 +17,11 @@ void	*ft_bzero(void *s, size_t n)
 {
 	char	*memoria_s;
 
-	a = 0;
 	memoria_s = (char *)s;
 	while (n > 0)
 	{
-		memoria_s = 0;
+		*memoria_s = 0;
 		memoria_s++;
 		n--;
-		a++;
 	}
-	return ((void *)memoria_s);
 }
