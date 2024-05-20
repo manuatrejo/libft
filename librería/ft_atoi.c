@@ -12,30 +12,29 @@
 
 #include "libft.h"
 #include <limits.h>
+#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
 	int	a;
-	int	result;
 	int	sign;
+	size_t	result;
 
 	sign = 1;
 	result = 0;
 	a = 0;
-	while (str[a] == ' ' || str[a] == '\f' || str[a] == '\n'
-		|| str[a] == '\r' || str[a] == '\t' || str[a] == '\v')/*probar con poner en ascii del nueve al 13 incluidos*/
+	while (str[a] == ' ' || (str[a] < 14 && str[a] > 8)
 		a++;
 	if (str[a] == '-')
-		result *= -1;
+		sign *= -1;
 	if (str[a] == '+' || str[a] == '-')
 		a++;
 	while (str[a] >= '0' && str[a] <= '9')
 	{
-		if (result > INT_MAX)
-			return (0);
-		result *= 10;
-		result += /*result * 10*/str[a] - '0';
+		result = result * 10 + str[a] - '0';
 		a++;
+		if (result > INT_MAX || result * sign < INT_MIN)
+			return (0);
 	}
 	return (sign * result);
 }
