@@ -21,13 +21,13 @@ char	*ft_strnstr(const char *haystack, const char *hay, size_t len)
 	a = 0;
 	if (hay[a] == '\0')
 		return ((char *)haystack);
-	while (haystack[a] != '\0' && len - a > 0)
+	while (haystack[a] && len - a > 0)
 	{
 		b = 0;
-		while (haystack[a + b] == hay[a + b] && len - a - b > 0)
+		while (haystack[a + b] == hay[b] && len - a - b > 0)
 		{
-			if (hay[a + b] == '\0')
-				return ((char *)&hay[a]);
+			if (hay[b] == '\0')
+				return ((char *)&haystack[a]);
 			b++;
 		}
 		a++;
