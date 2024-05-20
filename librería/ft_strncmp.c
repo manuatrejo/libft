@@ -15,12 +15,11 @@
 
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	size_t	a;
-
-	a = 0;
-	while (a < n && *s1 && *s2 && *s1 == *s2)
+	while (0 < n && *s1 && *s2 && *s1 == *s2)
 	{
-		a++;
+		n--;
+		if (n == 0)
+			return (*s1 - *s2);
 		s1++;
 		s2++;
 	}
