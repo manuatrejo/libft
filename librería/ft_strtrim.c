@@ -23,17 +23,18 @@ char	*ft_strtrim(const char *s1, const char *set)
 	punt = malloc(ft_strlen(s1) + 1);
 	if (!punt)
 		return (punt);
-	while (s1[a])
+	while (*s1)
 	{
-		while (s1[a] != *set /* pa luego*/
-		if (s1[a] != *set)
+		a = 0;
+		while (*s1 != set[a] && set[a])
+			a++;
+		if (set[a] == '\0')
 		{
-			punt[b] = s1[a];
+			punt[b] = *s1;
 			b++;
 		}
-		a++;
+		s1++;
 	}
-	set++;
 	punt[b] = '\0';
 	return (punt);
 }
