@@ -43,11 +43,14 @@ char	*ft_itoa(int n)
 
 	a = 0;
 	b = intlength(n);
-	punt = (char *)malloc(b + 1);
+	punt = malloc(b + 1);
 	if (!punt)
 		return (NULL);
 	if (n < 0)
+	{
 		punt[0] = '-';
+		n *= -1;
+	}
 	if (n == 0)
 		punt[0] = '0';
 	while (n != 0)
