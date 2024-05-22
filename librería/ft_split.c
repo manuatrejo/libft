@@ -23,7 +23,7 @@ static int	nstrings(const char *s, char c)
 	a = 0;
 	if (!*s)
 		return (0);
-	while (s[a] != '\0')
+	while (s[a])
 	{
 		if (s[a] == c)
 			count++;
@@ -41,7 +41,7 @@ static int	sslen(const char *s, char c)
 
 	b = 0;
 	length = 0;
-	while (s[b] != '\0' && s[b] != c)
+	while (s[b] || s[b] != c)
 	{
 		length++;
 		b++;
@@ -68,7 +68,7 @@ static char	**stringss(char **array, const char *s, int n, char c)
 
 	x = 0;
 	z = 0;
-	while (x < n && s[z] != '\0')
+	while (x < n && s[z])
 	{
 		array[x] = (char *)malloc(sizeof(char *) * (sslen(s, c) + 1));
 		if (!array[x])
