@@ -39,24 +39,26 @@ char	*ft_itoa(int n)
 {
 	size_t	a;
 	size_t	b;
+	size_t  nbr;
 	char	*punt;
 
 	a = 0;
+	nbr = n;
 	b = intlength(n);
 	punt = malloc(b + 1);
 	if (!punt)
 		return (NULL);
-	if (n < 0)
+	if (nbr < 0)
 	{
 		punt[0] = '-';
-		n *= -1;
+		nbr *= -1;
 	}
-	if (n == 0)
+	if (nbr == 0)
 		punt[0] = '0';
-	while (n != 0)
+	while (nbr != 0)
 	{
-		punt[(b - 1) - a] = n % 10 + '0';
-		n /= 10;
+		punt[(b - 1) - a] = nbr % 10 + '0';
+		nbr /= 10;
 		a++;
 	}
 	punt[b] = '\0';
