@@ -19,7 +19,7 @@ static int	nstrings(const char *s, char c)
 	int	count;
 	int	a;
 
-	count = 1;
+	count = 0;
 	a = 0;
 	if (!*s)
 		return (0);
@@ -31,6 +31,8 @@ static int	nstrings(const char *s, char c)
 			a++;
 		a++;
 	}
+	if (s[0] != c)
+		count++;
 	return (count);
 }
 
