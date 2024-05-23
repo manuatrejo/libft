@@ -49,10 +49,9 @@ char	*ft_itoa(int n)
 	if (!punt)
 		return (NULL);
 	if (nbr < 0)
-	{
-		punt[0] = '-';
 		nbr *= -1;
-	}
+	if (n < 0)
+		punt[0] = "-";
 	if (nbr == 0)
 		punt[0] = '0';
 	while (nbr != 0)
