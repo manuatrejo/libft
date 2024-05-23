@@ -6,14 +6,14 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 19:26:34 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/17 22:07:47 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/23 21:54:19 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	while (*s)
 	{

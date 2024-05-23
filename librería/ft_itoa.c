@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 20:58:52 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/17 20:54:00 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/23 21:06:46 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 {
 	size_t	a;
 	size_t	b;
-	size_t  nbr;
+	long	nbr;
 	char	*punt;
 
 	a = 0;
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 	if (nbr < 0)
 		nbr *= -1;
 	if (n < 0)
-		punt[0] = "-";
+		punt[0] = '-';
 	if (nbr == 0)
 		punt[0] = '0';
 	while (nbr != 0)

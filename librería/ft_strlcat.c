@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 19:09:14 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/15 19:10:38 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/23 23:08:44 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	size_t	b;
 	size_t	dstlen;
 
+	dstlen = ft_strlen(dst);
+	if (n <= ft_strlen(dst))
+		return (n + ft_strlen(src));
 	a = 0;
 	b = 0;
-	if (!dst || !src)
-		return (0);
-	dstlen = ft_strlen(dst);
 	while (dst[a] && n > 1)
 	{
 		a++;
@@ -38,5 +38,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	}
 	if (n != 0)
 		dst[a] = '\0';
-	return (dstlen + b);
+	return (ft_strlen(src) + dstlen);
 }
