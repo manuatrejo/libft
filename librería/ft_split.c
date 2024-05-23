@@ -41,11 +41,13 @@ static int	sslen(const char *s, char c)
 
 	b = 0;
 	length = 0;
-	while (s[b] || s[b] != c)
+	while (s[b] && s[b] != c)
 	{
 		length++;
 		b++;
 	}
+	while (s[b] == c)
+		b++;
 	return (length);
 }
 
