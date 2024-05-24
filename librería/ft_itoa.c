@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 {
 	size_t	a;
 	size_t	b;
-	long	nbr;
+	long long	nbr;
 	char	*punt;
 
 	a = 0;
