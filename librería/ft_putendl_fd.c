@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 21:16:49 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/17 19:24:04 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:24:29 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s)
-	{
-		write (fd, &s, 1);
-		s++;
-	}
+	ft_putstr_fd(s, fd);
 	write (fd, "\n", 1);
 }

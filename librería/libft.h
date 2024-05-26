@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:32:30 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/17 19:19:14 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/26 00:09:26 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ size_t	ft_strlen(const char *s);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *hay, size_t len);
-char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 int		ft_tolower(int c);

@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 20:58:52 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/23 21:06:46 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:51:22 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 static int	intlength(int n)
 {
-	int	length;
-	int	aux;
+	int			length;
+	long long	aux;
 
 	aux = n;
 	length = 0;
@@ -37,10 +37,10 @@ static int	intlength(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t	a;
-	size_t	b;
+	size_t		a;
+	size_t		b;
+	char		*punt;
 	long long	nbr;
-	char	*punt;
 
 	a = 0;
 	nbr = n;

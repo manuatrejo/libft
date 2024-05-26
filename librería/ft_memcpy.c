@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 18:57:39 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/15 18:58:30 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:44:59 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*a;
 	char	*b;
 
+	if (!dest && !src)
+		return (NULL);
 	a = (char *)src;
 	b = (char *)dest;
 	while (n > 0)
@@ -27,5 +29,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		b++;
 		n--;
 	}
-	return (dest);
+	return ((void *)dest);
 }

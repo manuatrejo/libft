@@ -6,7 +6,7 @@
 /*   By: manguita <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 19:15:31 by manguita          #+#    #+#             */
-/*   Updated: 2024/05/17 22:00:19 by manguita         ###   ########.fr       */
+/*   Updated: 2024/05/25 23:17:53 by manguita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	unsigned char	uc;
+
+	uc = c;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == uc)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (uc == '\0')
 		return ((char *)s);
 	return (NULL);
 }
